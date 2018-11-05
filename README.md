@@ -10,6 +10,12 @@ If you have any question, open an issue :-)
 
 Pull requests are welcome
 
+Installation
+------------
+
+
+    pip install -i https://test.pypi.org/simple/ teagmail
+    
 Setup
 -----
 
