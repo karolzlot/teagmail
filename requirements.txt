@@ -1,0 +1,4 @@
+httplib2
+setuptools
+python_dateutil
+google_api_python_client
