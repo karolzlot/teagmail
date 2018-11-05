@@ -87,7 +87,7 @@ Usage - READ
 
 | **Gmail.** | Parameters | Description |
 | ------------- |-------------| -----|
-| GetMessages().list() | msgNum | Fetches 'msgNum' message ID's, recipient, sender name, sender email, subject and body of email in plain text or html format. |
+| GetMessages() | see example above | Fetches 'msgNum' message ID's, recipient, sender name, sender email, subject and body of email in plain text or html format. |
 | sendMessage() | to, from, subject, content | sends an email from users mailbox  |
 | listLabels()   | ---  |  lists all labels |
 | addLabel()   |  msgid, labelid |  adds label |
