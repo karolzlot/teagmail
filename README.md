@@ -27,7 +27,7 @@ Generate a client ID and client secret https://developers.google.com/gmail/api/q
 
 
 
-Usage - READ
+Usage
 ------------
 
 
@@ -63,7 +63,7 @@ Usage - READ
         labels = Gmail.listLabels()   # use this to get id of labels
 
 
-    def testSend():
+    def testSend():  # currently sending does not work, because of wrong SCOPE
         """Sends email based of user input"""
         mailData = [input('Name: '), input('Recipient: '),
                     input('Subject: '), input('content: ')]
@@ -113,7 +113,7 @@ Usage - READ
 **To do:**
 
 * add removeMessege
-* test if sendMessage really works 
+* currently sending does not work, because of wrong SCOPE, test if it will work 
 
 
 Based on https://github.com/Charlkie/PyMail
