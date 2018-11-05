@@ -113,7 +113,7 @@ Usage - READ
 **To do:**
 
 * add removeMessege
-* test if sendMessage 
+* test if sendMessage really works 
 
 
 Based on https://github.com/Charlkie/PyMail
