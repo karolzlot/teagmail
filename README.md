@@ -120,3 +120,4 @@ Based on https://github.com/Charlkie/PyMail
 
 Thanks to
 * @Charlkie
+* @yoda-yoda
