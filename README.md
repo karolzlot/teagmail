@@ -25,50 +25,48 @@ Usage - READ
 ------------
 
 
-
     from teagmail import Gmail
-    
+
     Gmail = Gmail()
+
 
     def main():
 
-      # Gets users total number of messages in all mailboxes
-      msgTotal = Gmail.getUserInfo()['messagesTotal']
+        # Gets users total number of messages in all mailboxes
+        msgTotal = Gmail.getUserInfo()['messagesTotal']
 
-      # example1	 # 	Get list of all messages
-      messages = Gmail.getMessages()
+        # example1	 # 	Get list of all messages
+        messages = Gmail.getMessages()
 
-      # example2:    using query with syntax the same as in Gmail search box
-      messages2 = messages = Gmail.getMessages(
-        'subject:("Welcome to Gmail") from:(noreply@github.com) -label:mylabel')   #   minus "-" means NOT
-        
-      # example3:   (only 5 messages)
-      messages3 = Gmail.GetMessages().list(5, ["INBOX"])
-      
-      if messages is not None:
+        # example2:    using query with syntax the same as in Gmail search box
+        messages2 = messages = Gmail.getMessages(
+            'subject:("Welcome to Gmail") from:(noreply@github.com) -label:mylabel')  # minus "-" means NOT
 
-        for msg in messages:
-            print(msg['html'] if 'html' in msg else msg['txt'])  	# printing messages bodies	 # simple check if it is html or text
-            Gmail.addLabel(msg['id'], 'Label_7438957439057033324')      # Label_7438957439057033324 is id, not name of label
-            Gmail.removeLabel(msg['id'], 'INBOX')  # archive message
+        # example3:   (only 5 messages)
+        messages3 = Gmail.GetMessages().list(5, ["INBOX"])
+
+        if messages is not None:
+
+            for msg in messages:
+                # printing messages bodies	 # simple check if it is html or text
+                print(msg['html'] if 'html' in msg else msg['txt'])
+                # Label_7438957439057033324 is id, not name of label
+                Gmail.addLabel(msg['id'], 'Label_7438957439057033324')
+                Gmail.removeLabel(msg['id'], 'INBOX')  # archive message
+
+        labels = Gmail.listLabels()   # use this to get id of labels
 
 
-      labels = Gmail.listLabels()   # use this to get id of labels
-      
+    def testSend():
+        """Sends email based of user input"""
+        mailData = [input('Name: '), input('Recipient: '),
+                    input('Subject: '), input('content: ')]
 
-
-    def testSend():  
-      """Sends email based of user input"""
-      mailData = [ input('Name: '), input('Recipient: '),
-              input('Subject: '), input('content: ') ]
-
-      Gmail.sendMessage(*mailData)
-
+        Gmail.sendMessage(*mailData)
 
 
     if __name__ == '__main__':
-      main()
-
+        main()
 
 
 
