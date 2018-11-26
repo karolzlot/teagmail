@@ -5,6 +5,8 @@ python GmailApi library
 [![License](https://img.shields.io/badge/License-MIT-orange.svg)](https://github.com/Charlkie/PyMail/blob/master/LICENSE)
 ![](https://img.shields.io/badge/Version-Alpha%200.0.1-brightgreen.svg)
 
+(If you are reading this on PyPI you can go on the project's GitHub page for a properly formatted version)
+
 
 If you have any question, open an issue :-)
 
